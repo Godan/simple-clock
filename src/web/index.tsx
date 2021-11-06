@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
+import Clock from './components/clock'
 
 const App = (): JSX.Element => {
+
   return (
     <div>
-      <h1>Hello.</h1>
+      <h1><Clock /></h1>
     </div>
   );
 };
