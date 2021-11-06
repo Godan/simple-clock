@@ -24,6 +24,7 @@ const createWindow = () => {
     webPreferences: {
       preload: path.resolve(__dirname, 'preload.js'),
     },
+    titleBarStyle: 'hidden',
   });
 
   if (isDev) {

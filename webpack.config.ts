@@ -15,7 +15,7 @@ const config: Configuration = {
     __filename: false,
   },
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
+    extensions: ['.js', '.ts', '.jsx', '.tsx', '.json', '.css'],
   },
   entry: {
     // エントリーファイル
@@ -68,7 +68,9 @@ const config: Configuration = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'assets/css/index.css'
+    }),
     /**
      * バンドルしたJSファイルを <script></script> タグとして差し込んだ
      * HTMLファイルを出力するプラグイン

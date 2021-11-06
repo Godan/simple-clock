@@ -1,12 +1,22 @@
 import React, {useState, ReactElement} from 'react'
 
 function Clock(): ReactElement {
-  const date = new Date();
+  let date: Date = new Date();
   const [time, setTime] = useState<any>(date.toLocaleTimeString());
 
-
+  const intervalMs = 100;
+ 
+  React.useEffect(() => {
+      const intervalId = setInterval(() => {
+        date = new Date();
+        setTime(date.toLocaleTimeString())
+      }, intervalMs);
+      return () => {
+        clearInterval(intervalId)
+      };
+  }, []);
   return (
-    <div>
+    <div className="clock">
       {time}
     </div>
   )
