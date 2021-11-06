@@ -25,6 +25,9 @@ const createWindow = () => {
       preload: path.resolve(__dirname, 'preload.js'),
     },
     titleBarStyle: 'hidden',
+    width: 470,
+    height: 150,
+    alwaysOnTop: true
   });
 
   if (isDev) {
