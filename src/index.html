@@ -1,0 +1,86 @@
+<html>
+
+<body>
+    <h1 class="clock">aa</h1>
+</body>
+<script>
+    let date = new Date();
+    const intervalMs = 100;
+
+    document.getElementsByClassName("clock")[0].innerHTML = date.toLocaleTimeString();
+
+    const intervalId = setInterval(() => {
+        date = new Date();
+        document.getElementsByClassName("clock")[0].innerHTML = date.toLocaleTimeString();
+
+    }, intervalMs);
+</script>
+<style>
+    .main {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "contents"
+            "footer";
+        grid-template-columns: 1fr;
+        height: 100%;
+        width: 100%;
+    }
+
+    .header {
+        height: 5%;
+    }
+
+    .footer {
+        height: 5%;
+    }
+
+    .content {
+        height: 90%;
+        padding: 0;
+        margin: 0;
+        -webkit-user-select: none;
+        -webkit-app-region: drag;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content h1 {
+        text-align: center;
+        height: 80%;
+        width: 80%;
+        margin: 10px;
+    }
+
+    .clock {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        font-size: 50vmin;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .content {
+        grid-area: contents;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+
+    body,
+    html,
+    .root {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+</html>
