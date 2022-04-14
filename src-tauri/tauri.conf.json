@@ -54,11 +54,12 @@
     "windows": [
       {
         "title": "Simple Clock",
-        "width": 800,
-        "height": 600,
-        "resizable": true,
+        "width": 650,
+        "height": 150,
+        "resizable": false,
         "fullscreen": false,
-        "alwaysOnTop": true
+        "alwaysOnTop": true,
+        "decorations": false
       }
     ],
     "security": {
