@@ -4,8 +4,8 @@
     "version": "0.1.0"
   },
   "build": {
-    "distDir": "../dist",
-    "devPath": "../src",
+    "distDir": "../src",
+    "devPath": "../src/",
     "beforeDevCommand": "",
     "beforeBuildCommand": ""
   },
@@ -49,7 +49,9 @@
       "active": false
     },
     "allowlist": {
-      "all": true
+      "window": {
+        "startDragging": true
+      }
     },
     "windows": [
       {
@@ -62,8 +64,6 @@
         "decorations": false
       }
     ],
-    "security": {
-      "csp": null
-    }
+    "security": {}
   }
 }
